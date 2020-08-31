@@ -13,8 +13,6 @@ clear; sleep 0.4; echo -e "\e[0;1m
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 "
 
-if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ;fi
-
 echo -e "\e[0;1m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;0;230;118m [1] Advance  Login Page                \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;41;121;255m [2] Animated Login Page                \e[0;1m┃"
@@ -35,6 +33,7 @@ echo;bash advance-login
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
+if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ;fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc
 echo 'if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then' > bash.bashrc
 echo '        command_not_found_handle() {' >> bash.bashrc
@@ -61,6 +60,7 @@ echo;bash animat-login
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
+if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ;fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc
 echo 'if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then' > bash.bashrc
 echo '        command_not_found_handle() {' >> bash.bashrc
