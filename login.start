@@ -4,7 +4,7 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
-clear; sleep 0.4; echo -e "\e[0;1m ;NORM
+clear; sleep 0.4; echo -e "\e[0;1m" ;NORM
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 █                                        █
 █\e[1;38;2;0;230;118m █   █▀█ █▀▀ █ █▄ █  █▀ █▀▀ ▀█▀ █ █ █▀█\e[0;1m █
@@ -20,7 +20,7 @@ echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [3] Channge Header                
 echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [4] Change Colors & Scheme             \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [5] Change Boot Menu                   \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [6] Update [Login Page]                \e[0;1m┃"
-echo -e "\e[0;1m┃\e[0;1;48;2;200;0;0m [7] Reset to Default                   \e[0;1m┃";NORM
+echo -e "\e[0;1m┃\e[0;1;48;2;200;0;0m [7] Reset to Default                   \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;200;255;255m [!] Choose an option :                 \e[0;1m┃"
 echo -e "\e[0;1m┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
 PUT 17 26
