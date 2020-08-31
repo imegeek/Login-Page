@@ -160,5 +160,5 @@ echo 'setopt +o nomatch' >> zshrc
 echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc ;fi
 echo;echo -e "\e[30m  [-] Configuration Successfully Reset    ";echo
-else echo;echo -e "\e[0;48;2;200;0;0m Input not found, Make sure you entered following input ! ";echo
+else echo;echo -e "\e[0;48;2;200;0;0m Input not found, Make sure you entered following input ! \e[0m";echo
 fi
