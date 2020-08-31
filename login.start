@@ -87,7 +87,8 @@ echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...    
 elif [[ $option = "05" ]] || [[ $option = "5" ]]; then
 echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...       ";echo
 elif [[ $option = "06" ]] || [[ $option = "6" ]]; then
-echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...       ";echo
+echo;cd /data/data/com.termux/files/home/login-page/program-files
+bash update.login-page;echo
 elif [[ $option = "07" ]] || [[ $option = "7" ]]; then
 cd /data/data/com.termux/files/usr/etc
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then rm cd /data/data/com.termux/files/usr/etc/bash.bashrc &> /dev/null
