@@ -1,6 +1,8 @@
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+cd .. ; rm -rf login-page
+
 spin () {
 local pid=$!
 local delay=0.05
