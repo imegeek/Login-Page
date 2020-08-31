@@ -1,7 +1,7 @@
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
-cd .. ; rm -rf login-page
+cd .. ; cd .. ; rm -rf login-page
 
 spin () {
 local pid=$!
@@ -23,6 +23,6 @@ NORM
 }
 
 trap '' 2
-( git clone https://github.com/abhackerofficial/login-page; sleep 2 ; cd login-page;bash login.start ) &> /dev/null & spin
+( git clone https://github.com/abhackerofficial/login-page; sleep 2 ) &> /dev/null & spin
+sleep 2 ;cd login-page;bash login.start
 trap 5
-
