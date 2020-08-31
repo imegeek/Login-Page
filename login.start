@@ -81,11 +81,11 @@ echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc
 echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
 elif [[	$option = "03" ]] || [[ $option = "3" ]]; then
-echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...       ";echo
+echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   ";echo
 elif [[ $option = "04" ]] || [[ $option = "4" ]]; then
-echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...       ";echo
+echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   ";echo
 elif [[ $option = "05" ]] || [[ $option = "5" ]]; then
-echo;echo -e "\e[0;1;30;48;2;200;200;100m[LOGIN PAGE] | Under development...       ";echo
+echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   ";echo
 elif [[ $option = "06" ]] || [[ $option = "6" ]]; then
 echo;cd /data/data/com.termux/files/home/login-page/program-files
 bash update.login-page;echo
