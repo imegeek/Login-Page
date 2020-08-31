@@ -24,5 +24,7 @@ NORM
 
 trap '' 2
 ( git clone https://github.com/abhackerofficial/login-page; sleep 2 ) &> /dev/null & spin
-sleep 2 ;cd login-page;bash login.start
+HIDCRSR
+sleep 1 ;cd login-page;bash login.start
 trap 5
+NORM
