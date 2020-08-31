@@ -27,3 +27,4 @@ trap '' 2
 ( sleep 2 ) &> /dev/null & spin
 trap 5
 cd login-page;bash login.start
+
