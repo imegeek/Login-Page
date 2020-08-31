@@ -11,7 +11,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
         HIDCRSR
-        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Updating login-page... \e[0;1;90;48;2;0;230;118m     [ $i ]    \033[3m\033[0m   ";
+        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Updating login-page...\e[0;1;90;48;2;0;230;118m     [ $i ]    \033[3m\033[0m   ";
         sleep $delay
         printf "\b\b\b\b\b\b";
 done
