@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+PUT(){ echo -en "\033[${1};${2}H";}
+HIDCRSR(){ echo -en "\033[?25l";}
+NORM(){ echo -en "\033[?12l\033[?25h";}
+
+clear
+HIDCRSR
+PUT 2 1
+echo -e "\e[0;1m▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
+PUT 3 1
+echo -e "\e[0;1m█                                        █"
+PUT 4 1
+echo -e "\e[0;1m█                                        █"
+PUT 5 1
+echo -e "\e[0;1m█                                        █"
+PUT 6 1
+echo -e "\e[0;1m█                                        █"
+PUT 7 1
+echo -e "\e[0;1m█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█"
+
+PUT 4 2
+echo -e "\e[0;1m  █   █▀█ █▀▀ █ █▄ █   █▀█ █▀█ █▀▀ █▀▀
+\e[0;1m█ \e[0;;1m █▄▄ █▄█ █▄█ █ █ ▀█   █▀▀ █▀█ █▄█ ██▄" | lolcat -t
+PUT 7 1
+echo -e "\e[0;1m█"
+NORM
