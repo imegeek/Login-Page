@@ -31,7 +31,7 @@ read option
 
 if [[ $option = "01" ]] || [[ $option = "1" ]]; then
 cd /data/data/com.termux/files/home/login-page/program-files
-echo;bash advance-login
+echo;bash advance-login;echo -ne "\033]12;#b4e1fd\007"
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
@@ -62,7 +62,7 @@ echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
 
 elif [[ $option = "02" ]] || [[ $option = "2" ]]; then
 cd /data/data/com.termux/files/home/login-page/program-files
-echo;bash animat-login
+echo;bash animat-login;echo -ne "\033]12;#b4e1fd\007"
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
