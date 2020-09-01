@@ -98,7 +98,7 @@ elif [[ $option = "05" ]] || [[ $option = "5" ]]; then
 echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   \e[0m";echo
 elif [[ $option = "06" ]] || [[ $option = "6" ]]; then
 echo;cd /data/data/com.termux/files/home/login-page/program-files
-bash update.login-page;echo
+bash update.login;echo
 elif [[ $option = "07" ]] || [[ $option = "7" ]]; then
 cd /data/data/com.termux/files/home/login-page/program-files
 bash reset.login
