@@ -1,3 +1,7 @@
+#!/usr/bin/bash
+
+if [ -d "/data/data/com.termux/files/usr/etc/login-config" ];then
+rm -rf /data/data/com.termux/files/usr/etc/login-config ;fi
 cd /data/data/com.termux/files/usr/etc
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then rm cd /data/data/com.termux/files/usr/etc/bash.bashrc &> /dev/null
 #setup motd
