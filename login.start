@@ -12,7 +12,7 @@ clear; sleep 0.4; echo -e "\e[0;1m
 █                                        █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 "
-
+command -v pv > /dev/null 2>&1 || apt install pv -y &> /dev/null
 echo -e "\e[0;1m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;0;230;118m [1] Advanced Login Page                \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;41;121;255m [2] Animated Login Page                \e[0;1m┃"
