@@ -21,9 +21,11 @@ echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [4] Change Colors & Scheme        
 echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [5] Change Boot Menu                   \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;41;221;255m [6] Update [Login Page]                \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;200;0;0m [7] Reset to Default                   \e[0;1m┃";NORM
+echo -e "\e[0;1m┃\e[0;1;48;2;101;31;255m [8] Backups Previous Login             \e[0;1m┃"
+echo -e "\e[0;1m┃\e[0;1;48;2;101;31;255m [9] Restore Previous Login             \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;200;255;255m [!] Choose an option :                 \e[0;1m┃"
 echo -e "\e[0;1m┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-PUT 17 26
+PUT 19 26
 printf "\e[0;1;30;48;2;200;255;255m"
 read option
 
@@ -168,5 +170,9 @@ echo 'setopt +o nomatch' >> zshrc
 echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc ;fi
 echo;echo -e "\e[30m  [-] Configuration Successfully Reset    ";echo
+elif [[ $option = "08" ]] || [[ $option = "8" ]]; then
+echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   ";echo
+elif [[ $option = "09" ]] || [[ $option = "9" ]]; then
+echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   ";echo
 else echo;echo -e "\e[0;48;2;200;0;0m Input not found, Make sure you entered following input ! \e[0m";echo
 fi
