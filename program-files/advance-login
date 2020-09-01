@@ -1,10 +1,14 @@
 #!/usr/bin/bash
 
-printf "\e[0;1;38;2;41;121;255mEnter new Username : \e[0;1m"
+PUT(){ echo -en "\033[${1};${2}H";}
+
+printf "\e[0;1;48;2;41;121;255m  [!] Enter new Username :                "
+PUT 21 28
 read user
-printf "\e[1;38;2;0;230;118mEnter new Password : \e[0;1m"
+printf "\e[1;30;48;2;0;230;118m  [!] Enter new Password :                "
+PUT 22 28
 read check
-printf "\e[1;38;2;0;230;118mRe-Enter Password  : \e[0;1m"
+printf "\e[0;1;48;2;200;0;0m  [!] Re-Enter Password  :                "
 getPassword() {
 unset pass
 while IFS= read -p "$prompt" -r -s -n 1 char
@@ -21,12 +25,15 @@ do
     fi
 done
 }
+PUT 23 28
 getPassword
 if [[ $check = "$pass" ]];then
-echo;echo -e "Your Password are  : \e[0;1m[\e[1;30;48;2;0;230;118m $pass \e[0;1m] \e[0m (Remember that !)"
-else echo;echo -e "\e[0;1;38;2;200;0;0mPassword not matching...\e[0m"
-fi
-
+echo;echo -e "\e[0;1;30;48;2;200;255;255m  [√] Your M-Password As :                \e[0m "
+PUT 24 28
+echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m"
+echo -e "\e[0;1;48;2;200;0;0m  [!] Please Remember that all things !   "
+echo -e '\e[0;1;48;2;41;121;255m  [!] Open a new Session to see changes...\e[0m';echo
+else echo;echo -e "\e[0;1;38;2;200;0;0mPassword not matching...\e[0m";echo ;fi
 
 cd /data/data/com.termux/files/home/login-page/temp
 
@@ -38,18 +45,18 @@ echo 'while [ "$(ps a | awk '"'{print "'$1'"}'"' | grep $pid)" ]; do' >> login.e
 echo 'for i in "${spinner[@]}"' >> login.enc
 echo "do" >> login.enc
 echo "        HIDCRSR" >> login.enc
-echo '        echo -ne "\e[0;1;48;2;41;121;255m\r   [!] Checking Input...\e[0;1;90;48;2;0;230;118m[ $i ]\033[3m\033[0m   ";' >> login.enc
+echo '        echo -ne "\e[0;1;48;2;41;121;255m\r   [!] Checking Input...\e[0;1;90;48;2;0;230;118m      [ $i ]       \033[3m\033[0m   ";' >> login.enc
 echo '        sleep $delay' >> login.enc
 echo '        printf "\b\b\b\b\b\b";' >> login.enc
 echo "done" >> login.enc
 echo "done" >> login.enc
-echo 'printf "   \b\b\b\b\b"' >> login.enc
+echo 'printf "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"' >> login.enc
 echo 'if [[ $1 == granted ]]; then' >> login.enc
 echo 'printf "\e[0;1;48;2;41;121;255m\e[0;1;90;48;2;0;230;118m [ACCSES GRANTED] \e[0m\n"' >> login.enc
 echo 'echo"";' >> login.enc
 echo "NORM" >> login.enc
 echo 'elif [[ $1 == denied ]]; then' >> login.enc
-echo 'printf "\e[0;1;48;2;41;121;255m\e[0;1;48;2;200;0;0m [ACCESS DENIED] \e[0m\n"' >> login.enc
+echo 'printf "\e[0;1;48;2;41;121;255m\e[0;1;48;2;200;0;0m [ACCESS DENIED]  \e[0m\n"' >> login.enc
 echo "fi" >> login.enc
 echo "}" >> login.enc
 echo"" >> login.enc
