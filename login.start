@@ -33,7 +33,11 @@ echo;bash advance-login
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
-if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ;fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config" ];then cd /data/data/com.termux/files/usr/etc ; mkdir login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/header" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf header /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf colour-scheme /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/boot-menu" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf boot-menu /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ; fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc
 echo 'if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then' > bash.bashrc
 echo '        command_not_found_handle() {' >> bash.bashrc
@@ -60,6 +64,10 @@ echo;bash animat-login
 cd /data/data/com.termux/files/home/login-page/temp
 chmod +x login.enc
 mv login.enc /data/data/com.termux/files/usr/etc
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config" ];then cd /data/data/com.termux/files/usr/etc ; mkdir login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/header" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf header /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf colour-scheme /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/boot-menu" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf boot-menu /data/data/com.termux/files/usr/etc/login-config ; fi
 if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ;fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc
 echo 'if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then' > bash.bashrc
