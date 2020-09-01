@@ -33,14 +33,14 @@ if [[ $check = "$pass" ]];then
 echo;echo -e "\e[0;1;30;48;2;200;255;255m  [√] Your M-Password As :                \e[0m "
 HIDCRSR
 PUT 24 28
-echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m"
+echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m" ;trap '' 2
 echo -e "\e[0;1;48;2;200;0;0m  [!]                                     "
 PUT 25 7
 echo -e "\e[0;1;48;2;200;0;0mPlease Remember that all things !" | pv -qL 20
 echo -e "\e[0;1;48;2;41;121;255m  [!]                                     "
 PUT 26 7
-echo -e '\e[0;1;48;2;41;121;255mOpen a new Session to see changes...\e[0m' | pv -qL 20;echo;NORM
-else echo;echo -e "\e[0;1;38;2;200;0;0mPassword not matching...\e[0m";echo ;fi
+echo -e '\e[0;1;48;2;41;121;255mOpen a new Session to see changes...\e[0m' | pv -qL 20;echo;NORM ;trap 5
+else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
 
 cd /data/data/com.termux/files/home/login-page/temp
 
