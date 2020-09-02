@@ -92,13 +92,13 @@ echo"" >> login.enc
 echo "bash /data/data/com.termux/files/usr/etc/login-config/header/header.ui" >> login.enc
 echo "trap '' 2" >> login.enc
 echo "bash /data/data/com.termux/files/usr/etc/login-config/header/header.option" >> login.enc
-echo "PUT 11 25" >> login.enc
+echo "PUT 11 24" >> login.enc
 echo 'printf "\e[1;48;2;41;121;255m                "' >> login.enc
-echo "PUT 10 25" >> login.enc
+echo "PUT 10 24" >> login.enc
 echo 'printf "\e[1;90;48;2;0;230;118m                "' >> login.enc
-echo "PUT 10 25" >> login.enc
+echo "PUT 10 24" >> login.enc
 echo 'printf "\e[1;90;48;2;0;230;118m'$user'\e[0;1m" | pv -qL 20' >> login.enc
-echo "PUT 11 25" >> login.enc
+echo "PUT 11 24" >> login.enc
 echo 'printf "\e[1;48;2;41;121;255m"' >> login.enc
 echo "getPassword" >> login.enc
 echo"" >> login.enc
