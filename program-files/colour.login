@@ -167,3 +167,4 @@ mv header.rgb4 header.ui
 mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
 echo -e "\e[0;1;30;48;2;200;255;255m  [!] Color Configuration Successful !    \e[0m"
 else echo -e "\e[0;1;30;48;2;200;255;255m  [!] Colour not Found Choose another one ";fi
+
