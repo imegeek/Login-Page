@@ -156,15 +156,15 @@ mv header.rgb header.ui
 mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
 echo -e "\e[0;1;30;48;2;200;255;255m [C!] Color Configuration Successful !                \e[0m";echo -e "\e[0m"
 elif [[ $color = "23" ]];then
-cp header.rgb1 /data/data/com.termux/files/home/login-page/temp
-cd /data/data/com.termux/files/home/login-page/temp
-mv header.rgb1 header.ui
-mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
-echo -e "\e[0;1;30;48;2;200;255;255m [C!] Color Configuration Successful !                \e[0m";echo -e "\e[0m"
-elif [[ $color = "24" ]];then
 cp header.rgb2 /data/data/com.termux/files/home/login-page/temp
 cd /data/data/com.termux/files/home/login-page/temp
 mv header.rgb2 header.ui
+mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
+echo -e "\e[0;1;30;48;2;200;255;255m [C!] Color Configuration Successful !                \e[0m";echo -e "\e[0m"
+elif [[ $color = "24" ]];then
+cp header.rgb1 /data/data/com.termux/files/home/login-page/temp
+cd /data/data/com.termux/files/home/login-page/temp
+mv header.rgb1 header.ui
 mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
 echo -e "\e[0;1;30;48;2;200;255;255m [C!] Color Configuration Successful !                \e[0m";echo -e "\e[0m"
 elif [[ $color = "25" ]];then
