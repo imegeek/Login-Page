@@ -2,6 +2,7 @@ HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
 cd .. ; cd .. ; rm -rf login-page
+cd /data/data/com.termux/files/usr/share
 
 spin () {
 local pid=$!
@@ -26,6 +27,6 @@ HIDCRSR
 trap '' 2
 ( git clone https://github.com/abhackerofficial/login-page; sleep 2 ) &> /dev/null & spin
 HIDCRSR
-sleep 1 ;cd login-page;chmod +x login.start ;bash login.start;printf "\e[0m"
+sleep 1 ;mv login-page $HOME ; cd ;cd login-page;chmod +x login.start ;bash login.start;printf "\e[0m"
 trap 5
 NORM
