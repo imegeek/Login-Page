@@ -237,4 +237,4 @@ cd /data/data/com.termux/files/home/login-page/program-files
 bash restore.login
 elif [[ $option = "exit" ]] || [[ $option = "Exit" ]] || [[ $option = "EXIT" ]] || [[ $option = "kill" ]] || [[ $option = "Kill" ]] || [[ $option = "KILL" ]] || [[ $option = "bye" ]] || [[ $option = "Bye" ]] || [[ $option = "BYE" ]];then echo;echo -e "\e[0;1;30;48;2;200;255;255m  [!] Closing login-page...               \e[0m";echo -e "\033]12;#b4e1fd\007"; exit
 else echo;echo -e "\e[0;48;2;200;0;0m Input not found, Make sure you entered following input ! \e[0m";echo ;fi; echo -ne "\033]12;#b4e1fd\007"
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
