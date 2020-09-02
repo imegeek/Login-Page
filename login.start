@@ -4,6 +4,20 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+command -v ruby > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require ruby but it's not installed, Now Installing.\e[0m"; pkg install ruby -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi; }
+command -v lolcat > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require lolcat but it's not installed, Now Installing.\e[0m"; gem install lolcat; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then clear
+echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
+   exit
+fi; }
+command -v pv > /dev/null 2>&1 || apt install pv -y &> /dev/null
+
 echo -ne "\033]12;#363636\007"; clear; sleep 0.4; echo -e "\e[0;1m
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 █                                        █
@@ -12,7 +26,6 @@ echo -ne "\033]12;#363636\007"; clear; sleep 0.4; echo -e "\e[0;1m
 █              \e[0m(Early Access)\e[1m            █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 "
-command -v pv > /dev/null 2>&1 || apt install pv -y &> /dev/null
 echo -e "\e[0;1m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;0;230;118m [1] Advanced Login Page                \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;41;121;255m [2] Animated Login Page                \e[0;1m┃"
