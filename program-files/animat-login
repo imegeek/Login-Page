@@ -36,10 +36,10 @@ PUT 24 28
 echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m" ;trap '' 2
 echo -e "\e[0;1;48;2;200;0;0m  [!]                                     "
 PUT 25 7
-echo -e "\e[0;1;48;2;200;0;0mPlease Remember that all things !" | pv -qL 20
+echo -e "\e[0;1;48;2;200;0;0mPlease Remember that all things !" | pv -qL 25
 echo -e "\e[0;1;48;2;41;121;255m  [!]                                     "
 PUT 26 7
-echo -e '\e[0;1;48;2;41;121;255mOpen a new Session to see changes...\e[0m' | pv -qL 20;echo;NORM ;trap 5
+echo -e '\e[0;1;48;2;41;121;255mOpen a new Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
 else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
 
 cd /data/data/com.termux/files/home/login-page/temp
@@ -52,7 +52,7 @@ echo 'while [ "$(ps a | awk '"'{print "'$1'"}'"' | grep $pid)" ]; do' >> login.e
 echo 'for i in "${spinner[@]}"' >> login.enc
 echo "do" >> login.enc
 echo "        HIDCRSR" >> login.enc
-echo '        echo -ne "\e[0;1;48;2;41;121;255m\r   [!] Checking Input...\e[0;1;90;48;2;0;230;118m      [ $i ]       \033[3m\033[0m   ";' >> login.enc
+echo '        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Checking Input... \e[0;1;90;48;2;0;230;118m      [ $i ]       \033[3m\033[0m   ";' >> login.enc
 echo '        sleep $delay' >> login.enc
 echo '        printf "\b\b\b\b\b\b";' >> login.enc
 echo "done" >> login.enc
