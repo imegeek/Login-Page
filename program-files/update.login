@@ -26,6 +26,6 @@ HIDCRSR
 trap '' 2
 ( git clone https://github.com/abhackerofficial/login-page; sleep 2 ) &> /dev/null & spin
 HIDCRSR
-sleep 1 ;cd login-page;chmod +x login-page ;bash login.start;printf "\e[0m"
+sleep 1 ;cd login-page;chmod +x login-start ;bash login.start;printf "\e[0m"
 trap 5
 NORM
