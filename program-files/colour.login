@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+PUT(){ echo -en "\033[${1};${2}H";}
+HIDCRSR(){ echo -en "\033[?25l";}
+NORM(){ echo -en "\033[?12l\033[?25h";}
+
 cd /data/data/com.termux/files/home/login-page/colour-scheme
 echo -ne "\033]12;#b4e1fd\007"
 echo;printf "\e[0;1;101m  [!] Choose an colour :                  \e[0m"
