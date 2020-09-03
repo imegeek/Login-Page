@@ -20,6 +20,18 @@ echo -e "\e[0;1m [22]  RGB Normal \e[0;1m [23]  RGB Reverse \e[0;1m [24]  RGB Fo
 echo -e "\e[0;1m [25]  RGB Retro  \e[0;1m [26]  RGB Smooth  \e[0m\e[0;1m [27]  RGB Freq   "
 echo""
 printf "\e[0;1;48;2;200;0;0m [C!] Choose an colour :                              \e[0m"
+PUT 11 1
+echo -e "\e[0;1m [22]  RGB Normal " | lolcat -t -f -i
+PUT 11 19
+echo -e "\e[0;1m [23]  RGB Reverse " | lolcat -t -i
+PUT 11 38
+echo -e "\e[0;1m [24]  RGB Force " | lolcat -t -i -f
+PUT 12 1
+echo -e "\e[0;1m [25]  RGB Retro  " | lolcat -t -i -f -p 1
+PUT 12 19
+echo -e "\e[0;1m [26]  RGB Smooth  " | lolcat -t -i -f -p 6 -S 2 -F 0.5
+PUT 12 38
+echo -e "\e[0;1m [27]  RGB Freq  " | lolcat -t -i -f -p 2 -F 0.5
 PUT 14 26
 printf "\e[0;1;48;2;200;0;0m"
 read color
