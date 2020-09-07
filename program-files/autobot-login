@@ -1,0 +1,62 @@
+#!/usr/bin/bash
+
+PUT(){ echo -en "\033[${1};${2}H";}
+HIDCRSR(){ echo -en "\033[?25l";}
+NORM(){ echo -en "\033[?12l\033[?25h";}
+
+printf "\e[0;1;48;2;41;121;255m  [!] Enter New Username :                "
+PUT 21 28
+read user
+echo -e "\e[0;1;30;48;2;200;255;255m  [√] Your M-Username As :                \e[0m "
+HIDCRSR
+PUT 22 28
+echo -e "\e[0;1;30;48;2;200;255;255m$user\e[0m" ;trap '' 2
+echo -e '\e[0;1;48;2;41;121;255m  [!] Open a New Session to see changes...\e[0m';echo;NORM ;trap 5
+
+cd /data/data/com.termux/files/home/login-page/temp
+
+echo "spin () {" > login.enc
+echo 'local pid=$!' >> login.enc
+echo "local delay=0.05" >> login.enc
+echo "local spinner=( '⠋' '⠙' '⠹' '⠼' '⠴' '⠦' '⠧' '⠇' '⠏' )" >> login.enc
+echo 'while [ "$(ps a | awk '"'{print "'$1'"}'"' | grep $pid)" ]; do' >> login.enc
+echo 'for i in "${spinner[@]}"' >> login.enc
+echo "do" >> login.enc
+echo "        HIDCRSR" >> login.enc
+echo '        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Checking Input... \e[0;1;90;48;2;0;230;118m      [ $i ]       \033[3m\033[0m   ";' >> login.enc
+echo '        sleep $delay' >> login.enc
+echo '        printf "\b\b\b\b\b\b";' >> login.enc
+echo "done" >> login.enc
+echo "done" >> login.enc
+echo 'printf "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"' >> login.enc
+echo 'if [[ $1 == granted ]]; then' >> login.enc
+echo 'printf "\e[0;1;48;2;41;121;255m\e[0;1;90;48;2;0;230;118m [ACCSES GRANTED] \e[0m\n"' >> login.enc
+echo 'echo"";' >> login.enc
+echo "NORM" >> login.enc
+echo 'elif [[ $1 == denied ]]; then' >> login.enc
+echo 'printf "\e[0;1;48;2;41;121;255m\e[0;1;48;2;200;0;0m [ACCESS DENIED]  \e[0m\n"' >> login.enc
+echo "fi" >> login.enc
+echo "}" >> login.enc
+echo"" >> login.enc
+echo 'PUT(){ echo -en "\033[${1};${2}H";}' >> login.enc
+echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> login.enc
+echo 'NORM(){ echo -en "\033[?12l\033[?25h";}' >> login.enc
+echo"" >> login.enc
+echo "bash /data/data/com.termux/files/usr/etc/login-config/header/header.ui" >> login.enc
+echo "trap '' 2" >> login.enc
+echo "bash /data/data/com.termux/files/usr/etc/login-config/header/header.option" >> login.enc
+echo "PUT 11 24" >> login.enc
+echo 'printf "\e[1;48;2;41;121;255m                "' >> login.enc
+echo "PUT 10 24" >> login.enc
+echo 'printf "\e[1;90;48;2;0;230;118m                "' >> login.enc
+echo "PUT 10 24" >> login.enc
+echo 'printf "\e[1;90;48;2;0;230;118m'$user'\e[0;1m" | pv -qL 20' >> login.enc
+echo "PUT 11 24" >> login.enc
+echo 'printf "\e[1;48;2;41;121;255m"' >> login.enc
+echo 'echo -e "**********\033[34m" | pv -qL 12' >> login.enc
+echo"" >> login.enc
+echo 'echo"";' >> login.enc
+echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
+echo "trap 5" >> login.enc
+echo"" >> login.enc
+chmod +x login.enc
