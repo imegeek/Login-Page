@@ -4,10 +4,10 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
-printf "\e[0;1;48;2;41;121;255m  [!] Enter new Username :                "
+printf "\e[0;1;48;2;41;121;255m  [!] Enter New Username :                "
 PUT 21 28
 read user
-printf "\e[1;30;48;2;0;230;118m  [!] Enter new Password :                "
+printf "\e[1;30;48;2;0;230;118m  [!] Enter New Password :                "
 PUT 22 28
 read check
 printf "\e[0;1;48;2;200;0;0m  [!] Re-Enter Password  :                "
@@ -39,7 +39,7 @@ PUT 25 7
 echo -e "\e[0;1;48;2;200;0;0mPlease Remember that all things !" | pv -qL 25
 echo -e "\e[0;1;48;2;41;121;255m  [!]                                     "
 PUT 26 7
-echo -e '\e[0;1;48;2;41;121;255mOpen a new Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
+echo -e '\e[0;1;48;2;41;121;255mOpen a New Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
 else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
 
 cd /data/data/com.termux/files/home/login-page/temp
