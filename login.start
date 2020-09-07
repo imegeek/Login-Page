@@ -16,6 +16,7 @@ then clear
 echo -e "\033[1;91m                             [\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi; }
+
 command -v pv > /dev/null 2>&1 || apt install pv -y &> /dev/null
 
 echo -ne "\033]12;#363636\007"; clear; sleep 0.4; echo -e "\e[0;1m
