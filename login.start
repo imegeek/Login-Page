@@ -139,7 +139,8 @@ clear
 cd /data/data/com.termux/files/home/login-page/program-files
 bash colour.login
 elif [[ $option = "05" ]] || [[ $option = "5" ]]; then
-echo;echo -e "\e[0;1;30;48;2;200;255;10m  [!] LOGIN PAGE | Under development...   \e[0m";echo
+cd /data/data/com.termux/files/home/login-page/program-files
+echo -ne "\033]12;#b4e1fd\007";echo -e "\e[0m";bash header.login
 elif [[ $option = "06" ]] || [[ $option = "6" ]]; then
 echo;cd /data/data/com.termux/files/home/login-page/program-files
 bash update.login;echo
