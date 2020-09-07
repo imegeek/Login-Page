@@ -115,4 +115,5 @@ echo 'echo"";' >> login.enc
 echo '(sleep 1) &> /dev/null & spin denied ; printf "\e[1;91m" ; kill -9 $PPID' >> login.enc
 echo "fi" >> login.enc
 echo "trap 5" >> login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi' >> login.enc
 chmod +x login.enc
