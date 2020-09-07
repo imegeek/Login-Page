@@ -59,4 +59,5 @@ echo 'echo"";' >> login.enc
 echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
 echo "trap 5" >> login.enc
 echo"" >> login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi' >> login.enc
 chmod +x login.enc
