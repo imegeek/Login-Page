@@ -28,13 +28,13 @@ echo -e '\033[1;100m   [10] sblood   \033[1;104m   [P] Preview Fonts  \033[101m 
 echo
 cd /data/data/com.termux/files/usr/etc
 PUT 14 1
-echo -e "\e[0;1;30;48;2;200;255;255m   [!] Choose an Font :                                      "
-echo -e "\e[0;1;30;48;2;200;255;255m   [!] Type your name here :                                 "
-PUT 14 25
+echo -e "\e[0;1;30;48;2;200;255;255m   [!] Choose an Options   :                                 "
+echo -e "\e[0;1;30;48;2;200;255;255m   [!] Type your Name Here :                                 "
+PUT 14 30
 read fonts
+if [[ $fonts = "01" ]] || [[ $fonts = "1" ]];then
 PUT 15 30
 read name
-if [[ $fonts = "01" ]] || [[ $fonts = "1" ]];then
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -45,6 +45,8 @@ echo 'toilet -f "Shadow S" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "02" ]] || [[ $fonts = "2" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -55,6 +57,8 @@ echo 'toilet -f "Shadow R" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "03" ]] || [[ $fonts = "3" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -65,6 +69,8 @@ echo 'toilet -f "Block" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "04" ]] || [[ $fonts = "4" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -75,6 +81,8 @@ echo 'toilet -f "mono12" -F border  "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "05" ]] || [[ $fonts = "5" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -85,6 +93,8 @@ echo 'toilet -f "Cybermedium" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "06" ]] || [[ $fonts = "6" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -95,6 +105,8 @@ echo 'toilet -f "Fire Font-s" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "07" ]] || [[ $fonts = "7" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -105,6 +117,8 @@ echo 'toilet -f "Kban" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "08" ]] || [[ $fonts = "8" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -115,6 +129,8 @@ echo 'toilet -f "Shadow" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "09" ]] || [[ $fonts = "9" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -125,6 +141,8 @@ echo 'toilet -f "Sub-Zero" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "10" ]];then
+PUT 15 30
+read name
 cd /data/data/com.termux/files/usr/etc/login-config/font
 echo 'PUT(){ echo -en "\033[${1};${2}H";}' > font.login
 echo 'HIDCRSR(){ echo -en "\033[?25l";}' >> font.login
@@ -135,9 +153,8 @@ echo 'toilet -f "sblood" -F border "'$name'"' >> font.login
 echo "echo;NORM" >> font.login
 echo -e "\e[0;1;30;48;2;200;255;255m   [!] (Addon) Configuration Successfully !                  ";echo
 elif [[ $fonts = "e" ]] || [[ $fonts = "E" ]];then
-echo
+echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  \e[0m" ;echo
 elif [[ $fonts = "p" ]] || [[ $fonts = "P" ]];then
-echo
-else echo
+echo -e "\e[0;1;30;48;2;200;255;10m   [!] LOGIN PAGE | Under development...                     \e[0m";echo
+else echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  " ;echo
 fi
-
