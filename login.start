@@ -32,7 +32,7 @@ echo -e "\e[0;1m┃\e[0;1;30;48;2;0;230;118m [1] Advanced (Login Page)          
 echo -e "\e[0;1m┃\e[0;1;48;2;41;121;255m [2] Animated (Login Page)              \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;200;255;0m [3] Auto-Bot (Login Page)              \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;30;48;2;0;234;0m [4] Change Colors & Scheme             \e[0;1m┃"
-echo -e "\e[0;1m┃\e[0;1;30;48;2;0;255;255m [5] Customize Header [Addon]           \e[0;1m┃"
+echo -e "\e[0;1m┃\e[0;1;30;48;2;0;255;255m [5] Customize Header [Beta]            \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;50;150;255m [6] Update [Login Page]                \e[0;1m┃"
 echo -e "\e[0;1m┃\e[0;1;48;2;200;0;0m [7] Reset to Default                   \e[0;1m┃";NORM
 echo -e "\e[0;1m┃\e[0;1;48;2;101;31;255m [8] Backups Previous Login             \e[0;1m┃"
