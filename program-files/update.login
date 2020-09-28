@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+
+HIDCRSR(){ echo -en "\033[?25l";}
+NORM(){ echo -en "\033[?12l\033[?25h";}
+
+HIDCRSR	
+connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+if [[ "$connection" != 0 ]]
+then echo -e "\033[0;1;48;2;200;0;0m       [-] No Internet \033[0;1;30;48;2;0;255;50m connection!       "
+NORM;exit
+fi
+
+cd .. ; cd .. ; rm -rf login-page
+cd /data/data/com.termux/files/usr/share
+
+spin () {
+local pid=$!
+local delay=0.05
+local spinner=( '⠋' '⠙' '⠹' '⠼' '⠴' '⠦' '⠧' '⠇' '⠏' )
+while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+for i in "${spinner[@]}"
+do
+        HIDCRSR
+        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Updating login-page...\e[0;1;90;48;2;0;230;118m     [ $i ]    \033[3m\033[0m   ";
+        sleep $delay
+        printf "\b\b\b\b\b\b";
+done
+done
+printf "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"
+printf "\e[0;1;48;2;41;121;255m\e[0;1;90;48;2;0;230;118m  [!] Successfully Updated [LOGIN-PAGE]   \e[0m\n"
+echo"";
+NORM
+}
+
+HIDCRSR
+trap '' 2
+( git clone https://github.com/abhackerofficial/login-page; sleep 2 ) &> /dev/null & spin
+HIDCRSR
+sleep 1 ;mv login-page $HOME ; cd ;cd login-page;chmod +x login.start ;bash login.start;printf "\e[0m"
+trap 5
+NORM
