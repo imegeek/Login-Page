@@ -21,7 +21,7 @@ echo '* Upgrade packages:  pkg upgrade' >> motd
 echo >> motd
 echo 'Subscribing to additional repositories:' >> motd
 echo >> motd
-echo '* Root: pkg install root-repo' >> motd
+echo '* Root:     pkg install root-repo' >> motd
 echo '* Unstable: pkg install unstable-repo' >> motd
 echo '* X11:      pkg install x11-repo' >> motd
 echo >> motd
@@ -55,7 +55,7 @@ echo '* Upgrade packages:  pkg upgrade' >> motd
 echo >> motd
 echo 'Subscribing to additional repositories:' >> motd
 echo >> motd
-echo '* Root: pkg install root-repo' >> motd
+echo '* Root:     pkg install root-repo' >> motd
 echo '* Unstable: pkg install unstable-repo' >> motd
 echo '* X11:      pkg install x11-repo' >> motd
 echo >> motd
