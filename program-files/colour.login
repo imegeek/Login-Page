@@ -4,6 +4,9 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+if [ -f "/data/data/com.termux/files/usr/etc/login.enc" ];then
+
+clear
 cd /data/data/com.termux/files/home/login-page/colour-scheme
 echo -ne "\033]12;#b4e1fd\007"
 echo -e "\e[0m"
@@ -197,6 +200,6 @@ cd /data/data/com.termux/files/home/login-page/temp
 mv header.rgb4 header.ui
 mv header.ui /data/data/com.termux/files/usr/etc/login-config/header
 echo -e "\e[0;1;30;48;2;200;255;255m [C!] Color Configuration Successful !                \e[0m";echo -e "\e[0m"
-
 else echo -e "\e[0;1;30;48;2;200;255;255m [C!] Colour not Found Choose Another one !           \e[0;1m                               " ;fi
+else echo ;echo -e "\e[0;1;48;2;200;0;0m  [!] Config Not Found, Create Login File \e[0m";echo ;fi
 

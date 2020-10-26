@@ -155,7 +155,6 @@ echo "PS1='%# '" >> zshrc
 echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
 elif [[ $option = "04" ]] || [[ $option = "4" ]]; then
 printf "\e[0m"
-clear
 cd /data/data/com.termux/files/home/login-page/program-files
 bash colour.login
 elif [[ $option = "05" ]] || [[ $option = "5" ]]; then

@@ -31,7 +31,7 @@ if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];the
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/font" ];then cd /data/data/com.termux/files/usr/etc/login-config ; mkdir font ;fi
 if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ; fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc ;fi
-if [ -d "/data/data/com.termux/files/usr/etc/login-config" ];then
+if [ -f "/data/data/com.termux/files/usr/etc/login.enc" ];then
 
 banner() {
 clear;echo -ne "\033]12;#363636\007";echo -e '\e[0;1m
