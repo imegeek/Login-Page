@@ -25,6 +25,7 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+if [ -d "/data/data/com.termux/files/usr/etc/login-config" ];then
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config" ];then cd /data/data/com.termux/files/usr/etc ; mkdir login-config ; fi
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/header" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf header /data/data/com.termux/files/usr/etc/login-config ; fi
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];then cd /data/data/com.termux/files/home/login-page ; cp -rf colour-scheme /data/data/com.termux/files/usr/etc/login-config ; fi
@@ -179,5 +180,6 @@ echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...        
 elif [[ $fonts = "p" ]] || [[ $fonts = "P" ]];then
 printf "\e[0m"
 cd /data/data/com.termux/files/home/login-page/program-files ;bash preview.login
-else echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  " ;echo
-fi
+else echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  " ;echo ;fi
+else echo -e "\e[0;1;48;2;200;0;0m  [!] Config Not Found, Create Login File \e[0m";echo ;fi
+
