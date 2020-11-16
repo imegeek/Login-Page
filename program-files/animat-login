@@ -43,7 +43,6 @@ cd /data/data/com.termux/files/home/login-page/temp
 
 echo 'if [ -f "/data/data/com.termux/files/usr/tmp/anim.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
 echo "else" >> login.enc
-echo "cd /data/data/com.termux/files/usr/tmp ; touch anim.success ; cd $HOME" >> login.enc
 echo "main() {" >> login.enc
 echo "spin () {" >> login.enc
 echo 'local pid=$!' >> login.enc
@@ -107,7 +106,7 @@ echo 'if [[ $password = "'$pass'" ]];then' >> login.enc
 echo 'echo"";' >> login.enc
 echo 'echo"";' >> login.enc
 echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
-echo "cd /data/data/com.termux/files/usr/tmp ; touch anime.success ; cd $HOME" >> login.enc
+echo "cd /data/data/com.termux/files/usr/tmp ; touch anim.success ; cd $HOME" >> login.enc
 echo "trap 5" >> login.enc
 echo"" >> login.enc
 echo "else" >> login.enc
