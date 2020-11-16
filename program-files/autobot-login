@@ -15,9 +15,8 @@ echo -e '\e[0;1;48;2;41;121;255m  [!] Open a New Session to see changes...\e[0m'
 
 cd /data/data/com.termux/files/home/login-page/temp
 
-echo 'if [ -f "/data/data/com.termux/files/usr/tmp/bot.login" ];then PWD &> /dev/null' > login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/tmp/bot.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
 echo "else" >> login.enc
-echo "cd /data/data/com.termux/files/usr/tmp ; touch bot.success ; cd $HOME" >> login.enc
 echo "main() {" >> login.enc
 echo "spin () {" >> login.enc
 echo 'local pid=$!' >> login.enc
@@ -61,9 +60,10 @@ echo 'echo -e "**********\033[34m" | pv -qL 12' >> login.enc
 echo"" >> login.enc
 echo 'echo"";' >> login.enc
 echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
+echo "cd /data/data/com.termux/files/usr/tmp ; touch bot.success ; cd $HOME" >> login.enc
 echo "trap 5" >> login.enc
 echo"" >> login.enc
-echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi ;fi ; }' >> login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi ; } ;fi' >> login.enc
 echo "trap '' SIGTSTP" >>login.enc
 echo "trap '' SIGINT" >> login.enc
 echo "main" >> login.enc

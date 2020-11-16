@@ -34,17 +34,14 @@ echo;echo -e "\e[0;1;30;48;2;200;255;255m  [√] Your M-Password As :           
 HIDCRSR
 PUT 25 28
 echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m" ;trap '' 2
-echo -e "\e[0;1;48;2;200;0;0m  [!]                                     "
-PUT 26 7
-echo -e "\e[0;1;48;2;200;0;0mPlease Remember that all things !" | pv -qL 25
 echo -e "\e[0;1;48;2;41;121;255m  [!]                                     "
-PUT 27 7
+PUT 26 7
 echo -e '\e[0;1;48;2;41;121;255mOpen a New Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
 else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
 
 cd /data/data/com.termux/files/home/login-page/temp
 
-echo 'if [ -f "/data/data/com.termux/files/usr/tmp/anim.login" ];then PWD &> /dev/null' > login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/tmp/anim.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
 echo "else" >> login.enc
 echo "cd /data/data/com.termux/files/usr/tmp ; touch anim.success ; cd $HOME" >> login.enc
 echo "main() {" >> login.enc
@@ -110,6 +107,7 @@ echo 'if [[ $password = "'$pass'" ]];then' >> login.enc
 echo 'echo"";' >> login.enc
 echo 'echo"";' >> login.enc
 echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
+echo "cd /data/data/com.termux/files/usr/tmp ; touch anime.success ; cd $HOME" >> login.enc
 echo "trap 5" >> login.enc
 echo"" >> login.enc
 echo "else" >> login.enc
@@ -119,7 +117,7 @@ echo 'echo"";' >> login.enc
 echo '(sleep 1) &> /dev/null & spin denied ; printf "\e[1;91m" ; kill -9 $PPID' >> login.enc
 echo "fi" >> login.enc
 echo "trap 5" >> login.enc
-echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi ;fi ; }' >> login.enc
+echo 'if [ -f "/data/data/com.termux/files/usr/etc/login-config/font/font.login" ];then cd /data/data/com.termux/files/usr/etc/login-config/font ; bash font.login ;fi ; } ;fi' >> login.enc
 echo "trap '' SIGTSTP" >>login.enc
 echo "trap '' SIGINT" >> login.enc
 echo "main" >> login.enc

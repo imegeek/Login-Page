@@ -66,6 +66,9 @@ printf "\e[0;1;7m"
 read option
 
 if [[ $option = "01" ]] || [[ $option = "1" ]]; then
+if [ -f "/data/data/com.termux/files/usr/tmp/adv.success" ];then
+cd /data/data/com.termux/files/usr/tmp ; rm adv.success ;fi
+
 cd /data/data/com.termux/files/home/login-page/program-files
 echo -ne "\033]12;#b4e1fd\007";echo;bash advance-login
 cd /data/data/com.termux/files/home/login-page/temp
@@ -94,8 +97,13 @@ echo 'setopt +o nomatch' >> zshrc
 echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc
 echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
+cd /data/data/com.termux/files/home/login-page/program-files
+cp motd.login /data/data/com.termux/files/usr/etc/login-config
 
 elif [[ $option = "02" ]] || [[ $option = "2" ]]; then
+if [ -f "/data/data/com.termux/files/usr/tmp/anim.success" ];then
+cd /data/data/com.termux/files/usr/tmp ; rm anim.success ;fi
+
 cd /data/data/com.termux/files/home/login-page/program-files
 echo -ne "\033]12;#b4e1fd\007";echo;bash animat-login
 cd /data/data/com.termux/files/home/login-page/temp
@@ -124,7 +132,13 @@ echo 'setopt +o nomatch' >> zshrc
 echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc
 echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
+cd /data/data/com.termux/files/home/login-page/program-files
+cp motd.login /data/data/com.termux/files/usr/etc/login-config
+
 elif [[	$option = "03" ]] || [[ $option = "3" ]]; then
+if [ -f "/data/data/com.termux/files/usr/tmp/bot.success" ];then
+cd /data/data/com.termux/files/usr/tmp ; rm bot.success ;fi
+
 cd /data/data/com.termux/files/home/login-page/program-files
 echo -ne "\033]12;#b4e1fd\007";echo;bash autobot-login
 cd /data/data/com.termux/files/home/login-page/temp
@@ -153,6 +167,9 @@ echo 'setopt +o nomatch' >> zshrc
 echo '. /data/data/com.termux/files/usr/etc/profile' >> zshrc
 echo "PS1='%# '" >> zshrc
 echo 'bash /data/data/com.termux/files/usr/etc/login.enc' >> zshrc ;fi
+cd /data/data/com.termux/files/home/login-page/program-files
+cp motd.login /data/data/com.termux/files/usr/etc/login-config
+
 elif [[ $option = "04" ]] || [[ $option = "4" ]]; then
 printf "\e[0m"
 cd /data/data/com.termux/files/home/login-page/program-files
