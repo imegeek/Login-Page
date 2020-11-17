@@ -16,15 +16,15 @@ echo "IRC channel:     #termux on freenode" >> motd
 echo >> motd
 echo 'Working with packages:' >> motd
 echo >> motd
-echo '* Search packages:   pkg search <query>' >> motd
-echo '* Install a package: pkg install <package>' >>  motd
-echo '* Upgrade packages:  pkg upgrade' >> motd
+echo ' * Search packages:   pkg search <query>' >> motd
+echo ' * Install a package: pkg install <package>' >>  motd
+echo ' * Upgrade packages:  pkg upgrade' >> motd
 echo >> motd
 echo 'Subscribing to additional repositories:' >> motd
 echo >> motd
-echo '* Root:     pkg install root-repo' >> motd
-echo '* Unstable: pkg install unstable-repo' >> motd
-echo '* X11:      pkg install x11-repo' >> motd
+echo ' * Root:     pkg install root-repo' >> motd
+echo ' * Unstable: pkg install unstable-repo' >> motd
+echo ' * X11:      pkg install x11-repo' >> motd
 echo >> motd
 echo 'Report issues at https://termux.com/issues' >> motd
 echo >> motd
@@ -50,15 +50,15 @@ echo "IRC channel:     #termux on freenode" >> motd
 echo >> motd
 echo 'Working with packages:' >> motd
 echo >> motd
-echo '* Search packages:   pkg search <query>' >> motd
-echo '* Install a package: pkg install <package>' >>  motd
-echo '* Upgrade packages:  pkg upgrade' >> motd
+echo ' * Search packages:   pkg search <query>' >> motd
+echo ' * Install a package: pkg install <package>' >>  motd
+echo ' * Upgrade packages:  pkg upgrade' >> motd
 echo >> motd
 echo 'Subscribing to additional repositories:' >> motd
 echo >> motd
-echo '* Root:     pkg install root-repo' >> motd
-echo '* Unstable: pkg install unstable-repo' >> motd
-echo '* X11:      pkg install x11-repo' >> motd
+echo ' * Root:     pkg install root-repo' >> motd
+echo ' * Unstable: pkg install unstable-repo' >> motd
+echo ' * X11:      pkg install x11-repo' >> motd
 echo >> motd
 echo 'Report issues at https://termux.com/issues' >> motd
 echo >> motd
