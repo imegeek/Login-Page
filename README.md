@@ -5,10 +5,10 @@
 
 <p align="center">
 <p href="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge">
-<img src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></p>
+<img title="package" src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></p>
 
 <a href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge" />
-<img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
+<img title="license" src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
 
 <p align="center">
 <a href="https://github.com/abhackerofficial">
