@@ -3,7 +3,7 @@
 <a href="https://github.com/abhackerofficial">
 <img title="Github" src="https://img.shields.io/badge/ABHacker-Official-brightgreen?style=for-the-badge&logo=github"></a>
 
-<p align="right">
+<p align="left">
 <a href="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge">
 <img src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></a>
 
