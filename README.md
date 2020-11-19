@@ -1,5 +1,5 @@
 <p align="center">
-<img scr="https://img.shields.io/badge/ABHacker-Official-brightgreen?style=for-the-badge&logo=github"</a>
+<img "https://img.shields.io/badge/ABHacker-Official-brightgreen?style=for-the-badge&logo=github"</p>
 [![github](https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge)](https://github.com/abhackerofficial)
 [![github](https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge)](https://github.com/abhackerofficial)
 
