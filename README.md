@@ -9,8 +9,6 @@
 <a href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge">
 <img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
 
-![language](https://github-readme-stats.vercel.app/api/top-langs/?username=abhackerofficial&theme=blue-green)
-
 ![GitHub stars](https://img.shields.io/github/stars/abhackerofficial/Login-page.svg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/abhackerofficial/Login-page.svg?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/abhackerofficial/Login-page.svg?style=social)
