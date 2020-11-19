@@ -3,12 +3,12 @@
 <a href="https://github.com/abhackerofficial">
 <img title="Github" src="https://img.shields.io/badge/ABHacker-Official-brightgreen?style=for-the-badge&logo=github"></a>
 
-<p align="center">
+<p align="right">
 <p href="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge">
-<img title="package" src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></p>
+<img src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></p>
 
 <a href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge" />
-<img title="license" src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
+<img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
 
 <p align="center">
 <a href="https://github.com/abhackerofficial">
