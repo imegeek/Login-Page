@@ -3,8 +3,8 @@
 <img title="Github" src="https://img.shields.io/badge/ABHacker-Official-brightgreen?style=for-the-badge&logo=github"></a>
 <p href="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge">
 <img src="https://img.shields.io/badge/Login–page-v.2.5-red?style=for-the-badge"></p>
-<p href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge">
-<img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></p>
+<a href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge">
+<img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
 
 ![GitHub stars](https://img.shields.io/github/stars/abhackerofficial/Login-page.svg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/abhackerofficial/Login-page.svg?style=social)
