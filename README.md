@@ -10,13 +10,6 @@
 <a href="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge">
 <img src="https://img.shields.io/github/license/abhackerofficial/Login-page?color=blue&style=for-the-badge"></a>
 
-<p align="center">
-<a href="https://github.com/abhackerofficial">
-<img title="Language" src="https://img.shields.io/badge/Made%20with-Bash-1f425f.svg?v=103"></a>
-
-<a href="https://github.com/abhackerofficial">
-<img title="Followers" src="https://img.shields.io/github/followers/abhackerofficial?color=blue&style=flat-square"></a>
-
 ![GitHub stars](https://img.shields.io/github/stars/abhackerofficial/Login-page.svg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/abhackerofficial/Login-page.svg?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/abhackerofficial/Login-page.svg?style=social)
