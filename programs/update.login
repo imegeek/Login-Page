@@ -11,7 +11,7 @@ NORM;exit
 fi
 
 setup_files() {
-cd .. ; cd .. ; rm -rf Login-page
+cd .. ; cd .. ; rm -rf Login-Page
 cd /data/data/com.termux/files/usr/share ;}
 
 spin () {
@@ -22,13 +22,13 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
         HIDCRSR
-        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Updating login-page...\e[0;1;90;48;2;0;230;118m     [ $i ]    \033[3m\033[0m   ";
+        echo -ne "\e[0;1;48;2;41;121;255m\r  [!] Updating Login-Page...\e[0;1;90;48;2;0;230;118m     [ $i ]    \033[3m\033[0m   ";
         sleep $delay
         printf "\b\b\b\b\b\b";
 done
 done
 printf "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"
-printf "\e[0;1;48;2;41;121;255m\e[0;1;90;48;2;0;230;118m  [!] Successfully Updated [LOGIN-PAGE]   \e[0m\n"
+printf "\e[0;1;48;2;41;121;255m\e[0;1;90;48;2;0;230;118m  [!] Successfully Updated [Login-Page]   \e[0m\n"
 echo"";
 NORM
 }
@@ -36,9 +36,9 @@ NORM
 update() {
 HIDCRSR
 trap '' 2
-( git clone https://github.com/abhackerofficial/Login-page; sleep 2 ) &> /dev/null & spin
+( git clone https://github.com/abhackerofficial/Login-Page; sleep 2 ) &> /dev/null & spin
 HIDCRSR
-sleep 1 ;mv Login-page $HOME ; cd ;cd Login-page; bash login.start;printf "\e[0m"
+sleep 1 ;mv Login-Page $HOME ; cd ;cd Login-Page; bash login.start;printf "\e[0m"
 trap 5
 NORM ;}
 

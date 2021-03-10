@@ -39,7 +39,7 @@ PUT 26 7
 echo -e '\e[0;1;48;2;41;121;255mOpen a New Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
 else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
 
-cd /data/data/com.termux/files/home/Login-page/temp
+cd /data/data/com.termux/files/home/Login-Page/temp
 
 echo 'if [ -f "/data/data/com.termux/files/usr/tmp/anim.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
 echo "else" >> login.enc

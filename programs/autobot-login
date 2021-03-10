@@ -13,7 +13,7 @@ PUT 23 28
 echo -e "\e[0;1;30;48;2;200;255;255m$user\e[0m" ;trap '' 2
 echo -e '\e[0;1;48;2;41;121;255m  [!] Open a New Session to see changes...\e[0m';echo;NORM ;trap 5
 
-cd /data/data/com.termux/files/home/Login-page/temp
+cd /data/data/com.termux/files/home/Login-Page/temp
 
 echo 'if [ -f "/data/data/com.termux/files/usr/tmp/bot.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
 echo "else" >> login.enc

@@ -26,8 +26,8 @@ HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config" ];then cd /data/data/com.termux/files/usr/etc ; mkdir login-config ; fi
-if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/header" ];then cd /data/data/com.termux/files/home/Login-page ; cp -rf header /data/data/com.termux/files/usr/etc/login-config ; fi
-if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];then cd /data/data/com.termux/files/home/Login-page ; cp -rf colour-scheme /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/header" ];then cd /data/data/com.termux/files/home/Login-Page ; cp -rf header /data/data/com.termux/files/usr/etc/login-config ; fi
+if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/colour-scheme" ];then cd /data/data/com.termux/files/home/Login-Page ; cp -rf colour-scheme /data/data/com.termux/files/usr/etc/login-config ; fi
 if [ ! -d "/data/data/com.termux/files/usr/etc/login-config/font" ];then cd /data/data/com.termux/files/usr/etc/login-config ; mkdir font ;fi
 if [ -f "/data/data/com.termux/files/usr/etc/motd" ];then rm /data/data/com.termux/files/usr/etc/motd &> /dev/null ; fi
 if [ ! -d "/data/data/com.termux/files/home/.oh-my-zsh" ];then cd /data/data/com.termux/files/usr/etc ; rm bash.bashrc ;fi
@@ -179,7 +179,7 @@ elif [[ $fonts = "e" ]] || [[ $fonts = "E" ]];then
 echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  \e[0m" ;echo
 elif [[ $fonts = "p" ]] || [[ $fonts = "P" ]];then
 printf "\e[0m"
-cd /data/data/com.termux/files/home/Login-page/program-files ;bash preview.login
+cd /data/data/com.termux/files/home/Login-Page/program-files ;bash preview.login
 else echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  " ;echo ;fi
 else echo -e "\e[0;1;48;2;200;0;0m  [!] Config Not Found, Create Login File \e[0m";echo ;fi
 
