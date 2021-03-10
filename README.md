@@ -17,6 +17,6 @@
 
 ##### Installation Commands :
 ```bash
-git clone https://github.com/abhackerofficial/Login-page ;
-cd Login-page ; ./login.start
+git clone https://github.com/abhackerofficial/Login-Page ;
+cd Login-Page ; ./login.start
 ```
