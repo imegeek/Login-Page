@@ -4,6 +4,8 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+export CREDS="$PREFIX/etc/login-config/creds.login"
+
 C0="$(printf '\033[90m')"
 C1="$(printf '\033[91m')"
 C2="$(printf '\033[92m')"
@@ -49,7 +51,11 @@ if [[ $check = "$pass" ]];then
 echo -e "\n  (-) Your Master Password is : $pass\e[0m "
 echo -e '  (-) Now open new session to see changes.\e[0m'
 else echo -e "\n  (!) Password doesn't match, enter setup again.\e[0m"
+exit 1
 fi
+
+user=$(printf "$user" | sha256sum | awk '{print $1}')
+pass=$(printf "$pass" | sha256sum | awk '{print $1}')
 
 cd /data/data/com.termux/files/home/Login-Page/temp
 
@@ -110,13 +116,19 @@ echo "PUT 10 24" >> login.enc
 echo 'printf "\e[1;90;48;2;0;230;118m                "' >> login.enc
 echo "PUT 10 24" >> login.enc
 echo "read username" >> login.enc
-echo 'if [[ $username = "'$user'" ]];then' >> login.enc
+echo "USER() {" >> login.enc
+echo "printf "'$username'" | sha256sum | awk '{print \$1}'" >> login.enc
+echo "}" >> login.enc
+echo 'if [[ $(USER) = "'$user'" ]];then' >> login.enc
 echo "PUT 11 24" >> login.enc
 echo 'printf "\e[0;1;48;2;41;121;255m"' >> login.enc
 echo "getPassword" >> login.enc
+echo "PASSWD() {" >> login.enc
+echo "printf "'$password'" | sha256sum | awk '{print \$1}'" >> login.enc
+echo "}" >> login.enc
 echo "fi" >> login.enc
 echo"" >> login.enc
-echo 'if [[ $password = "'$pass'" ]];then' >> login.enc
+echo 'if [[ $(PASSWD) = "'$pass'" ]];then' >> login.enc
 echo 'echo"";' >> login.enc
 echo 'echo"";' >> login.enc
 echo "(sleep 1) &> /dev/null & spin granted" >> login.enc
