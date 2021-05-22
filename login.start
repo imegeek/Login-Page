@@ -4,6 +4,14 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
+distro=$(uname -o | grep -o "Android")
+
+if [[ $distro == *'Android'* ]];then
+:
+else echo "Login-Page isn't supported you're system."
+exit 0
+fi
+
 C0="$(printf '\033[90m')"
 C1="$(printf '\033[91m')"
 C2="$(printf '\033[92m')"
@@ -70,29 +78,29 @@ trap exit_on_signal_SIGINT SIGINT ; trap exit_on_signal_SIGTERM SIGTERM
 clear; sleep 0.4; echo -e "\e[0;1m
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 █                                        █
-█\e[1;38;2;0;230;118m █   █▀█ █▀▀ █ █▄ █  █▀ █▀▀ ▀█▀ █ █ █▀█\e[0;1m █
+█\e[00;1;38;2;0;230;118m █   █▀█ █▀▀ █ █▄ █  █▀ █▀▀ ▀█▀ █ █ █▀█\e[0;1m █
 █\e[0;1;38;2;41;121;255m █▄▄ █▄█ █▄█ █ █ ▀█  ▄█ ██▄  █  █▄█ █▀▀\e[0;1m █
 █                                        █
 █ \e[0;1;7m     Coding by - abhackerofficial     \e[0;1m █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-";sleep 0
+\e[0m";sleep 0
 
-printf "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"; sleep 0
-printf "┃  ${C2}Sn.      Options${R0}                      ┃\n"; sleep 0
-printf "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"; sleep 0
-printf "┃ $(OP 1) Advanced login page                ┃\n"; sleep 0
-printf "┃ $(OP 2) Animated login page                ┃\n"; sleep 0
-printf "┃ $(OP 3) Auto-bot login page                ┃\n"; sleep 0
-printf "┃ $(OP 4) Change colors & scheme             ┃\n"; sleep 0
-printf "┃ $(OP 5) Customize header beta              ┃\n"; sleep 0
-printf "┃ $(OP 6) Update login page                  ┃\n"; sleep 0
-printf "┃ $(OP 7) Reset to default                   ┃\n"; sleep 0
-printf "┃ $(OP 8) Backups previous setup             ┃\n"; sleep 0
-printf "┃ $(OP 9) Restore previous setup             ┃\n"; sleep 0
-printf "┃ $(OP i) Choose an option :                 ┃\n"; sleep 0
-printf "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n"; sleep 0
+printf "┏━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"; sleep 0
+printf "┃ ${C2}Sn. ${R0}┃     ${C2}Options${R0}                      ┃\n"; sleep 0
+printf "┣━━━━━╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"; sleep 0
+printf "┃ $(OP 1) ┃ Advanced login page              ┃\n"; sleep 0
+printf "┃ $(OP 2) ┃ Animated login page              ┃\n"; sleep 0
+printf "┃ $(OP 3) ┃ Auto-bot login page              ┃\n"; sleep 0
+printf "┃ $(OP 4) ┃ Change colors & scheme           ┃\n"; sleep 0
+printf "┃ $(OP 5) ┃ Customize header beta            ┃\n"; sleep 0
+printf "┃ $(OP 6) ┃ Update login page                ┃\n"; sleep 0
+printf "┃ $(OP 7) ┃ Reset to default                 ┃\n"; sleep 0
+printf "┃ $(OP 8) ┃ Backups previous setup           ┃\n"; sleep 0
+printf "┃ $(OP 9) ┃ Restore previous setup           ┃\n"; sleep 0
+printf "┃ $(OP '>') ┃ Choose an option :               ┃\n"; sleep 0
+printf "┗━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n"; sleep 0
 
-PUT 22 26
+PUT 22 28
 read option
 
 if [[ $option = "01" ]] || [[ $option = "1" ]]; then
