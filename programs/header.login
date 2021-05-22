@@ -179,7 +179,7 @@ elif [[ $fonts = "e" ]] || [[ $fonts = "E" ]];then
 echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  \e[0m" ;echo
 elif [[ $fonts = "p" ]] || [[ $fonts = "P" ]];then
 printf "\e[0m"
-cd /data/data/com.termux/files/home/Login-Page/program-files ;bash preview.login
+cd /data/data/com.termux/files/home/Login-Page/programs ;bash preview.login
 else echo -e "\e[0;1;48;2;200;0;0m   [!] Closing... Customising... Section...                  " ;echo ;fi
 else echo -e "\e[0;1;48;2;200;0;0m  [!] Config Not Found, Create Login File \e[0m";echo ;fi
 

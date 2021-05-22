@@ -4,13 +4,30 @@ PUT(){ echo -en "\033[${1};${2}H";}
 HIDCRSR(){ echo -en "\033[?25l";}
 NORM(){ echo -en "\033[?12l\033[?25h";}
 
-printf "\e[0;1;48;2;41;121;255m  [!] Enter New Username :                "
-PUT 22 28
+C0="$(printf '\033[90m')"
+C1="$(printf '\033[91m')"
+C2="$(printf '\033[92m')"
+C3="$(printf '\033[93m')"
+C4="$(printf '\033[94m')"
+C5="$(printf '\033[95m')"
+C6="$(printf '\033[96m')"
+C7="$(printf '\033[97m')"
+R0="$(printf '\033[00m')"
+R1="$(printf '\033[01m')"
+R2="$(printf '\033[02m')"
+R3="$(printf '\033[03m')"
+R4="$(printf '\033[04m')"
+
+OP()
+{
+printf "${C2}(${R0}$1${C2})${R0}"
+}
+
+printf "  $(OP '>') Enter new username of login : "
 read user
-printf "\e[1;30;48;2;0;230;118m  [!] Enter New Password :                "
-PUT 23 28
+printf "  $(OP '>') Enter new password of login : "
 read check
-printf "\e[0;1;48;2;200;0;0m  [!] Re-Enter Password  :                "
+printf "  $(OP '>') Enter again password of login : "
 getPassword() {
 unset pass
 while IFS= read -p "$prompt" -r -s -n 1 char
@@ -27,18 +44,12 @@ do
     fi
 done
 }
-PUT 24 28
 getPassword
 if [[ $check = "$pass" ]];then
-echo;echo -e "\e[0;1;30;48;2;200;255;255m  [√] Your M-Password As :                \e[0m "
-HIDCRSR
-PUT 25 28
-echo -e "\e[0;1;30;48;2;200;255;255m$pass\e[0m" ;trap '' 2
-echo -e "\e[0;1;48;2;41;121;255m  [!]                                     "
-PUT 26 7
-echo -e '\e[0;1;48;2;41;121;255mOpen a New Session to see changes...\e[0m' | pv -qL 25;echo;NORM ;trap 5
-else echo;echo -e "\e[0;1;48;2;200;0;0m  [!] Password not matching...            \e[0m";echo ;fi
-
+echo -e "\n  (-) Your Master Password is : $pass\e[0m "
+echo -e '  (-) Now open new session to see changes.\e[0m'
+else echo -e "\n  (!) Password doesn't match, enter setup again.\e[0m"
+fi
 cd /data/data/com.termux/files/home/Login-Page/temp
 
 echo 'if [ -f "/data/data/com.termux/files/usr/tmp/anim.success" ];then cat /data/data/com.termux/files/usr/etc/login-config/motd.login ;exit' > login.enc
