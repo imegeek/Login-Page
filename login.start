@@ -38,14 +38,14 @@ echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi; }
 
-command -v ruby > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require ruby but it's not installed, Now Installing.\e[0m"; pkg install ruby -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+command -v python > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require python but it's not installed, Now Installing.\e[0m"; apt install python -y; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then clear
 echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
    exit
 fi; }
 
-command -v lolcat > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require lolcat but it's not installed, Now Installing.\e[0m"; gem install lolcat; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+command -v lolcat > /dev/null 2>&1 || { echo -e >&2 "\033[1;91mI require lolcat but it's not installed, Now Installing.\e[0m"; pip install lolcat; clear; connection="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 if [[ "$connection" != 0 ]]
 then clear
 echo -e "\033[1;91m[\033[1;92m-\033[1;91m] No Internet\033[1;92m connection!"
@@ -81,7 +81,7 @@ clear; sleep 0.4; echo -e "\e[0;1m
 █\e[00;1;38;2;0;230;118m █   █▀█ █▀▀ █ █▄ █  █▀ █▀▀ ▀█▀ █ █ █▀█\e[0;1m █
 █\e[0;1;38;2;41;121;255m █▄▄ █▄█ █▄█ █ █ ▀█  ▄█ ██▄  █  █▄█ █▀▀\e[0;1m █
 █                                        █
-█ \e[0;1;7m     Coding by - abhackerofficial     \e[0;1m █
+█ \e[0;1;7m          Author - imegeek            \e[0;1m █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 \e[0m";sleep 0
 
